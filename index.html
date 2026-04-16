@@ -1,0 +1,99 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChampionsMash 2026</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <p class="eyebrow">Algoritmo A/B + ranking</p>
+      <h1>ChampionsMash 2026</h1>
+      <p class="hero-text">
+        Compara dos equipos de la Champions, elige el que prefieres y construye
+        tu propio ranking. El algoritmo aprende de tus decisiones humanas.
+      </p>
+    </header>
+
+    <section class="controls">
+      <div class="control-card">
+        <label for="objetivo">Objetivo del algoritmo</label>
+        <select id="objetivo">
+          <option value="seguir">Equipo que más me gustaría seguir</option>
+          <option value="espectaculo">Equipo más atractivo para ver</option>
+          <option value="historia">Equipo con más peso e historia</option>
+          <option value="sorpresa">Equipo sorpresa que apoyaría</option>
+          <option value="proyecto">Equipo con proyecto más sólido</option>
+        </select>
+      </div>
+
+      <div class="control-card">
+        <h3>Cómo funciona</h3>
+        <p>
+          1. El sistema muestra un duelo A/B.<br />
+          2. Tú eliges un equipo.<br />
+          3. Se guardan victorias, derrotas y apariciones.<br />
+          4. El ranking se ordena en tiempo real.
+        </p>
+      </div>
+
+      <div class="control-card">
+        <h3>Pregunta activa</h3>
+        <p id="preguntaObjetivo"></p>
+      </div>
+    </section>
+
+    <section class="status-grid">
+      <article class="status-card">
+        <h3>Progreso</h3>
+        <p id="progreso"></p>
+      </article>
+
+      <article class="status-card">
+        <h3>Idea clave</h3>
+        <p>
+          Este ranking no es neutro: depende de lo que tú valores al comparar
+          equipos.
+        </p>
+      </article>
+
+      <article class="status-card">
+        <h3>Guardado local</h3>
+        <p>
+          Tus decisiones se guardan en el navegador para que puedas seguir luego.
+        </p>
+      </article>
+    </section>
+
+    <main class="main-grid">
+      <section class="comparison-panel">
+        <div class="panel-header">
+          <h2>Duelo actual</h2>
+          <button id="skipBtn" class="ghost-btn">Cambiar duelo</button>
+        </div>
+
+        <div id="comparisonArea" class="comparison-area"></div>
+      </section>
+
+      <aside class="ranking-panel">
+        <h2>Ranking en tiempo real</h2>
+        <div id="topRecommendation" class="top-recommendation"></div>
+        <div id="rankingList" class="ranking-list"></div>
+      </aside>
+    </main>
+
+    <section class="history-panel">
+      <div class="panel-header">
+        <h2>Últimas decisiones</h2>
+        <button id="resetBtn" class="danger-btn">Reiniciar ranking</button>
+      </div>
+      <ul id="historyList" class="history-list"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
